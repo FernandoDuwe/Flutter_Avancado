@@ -5,10 +5,21 @@ Após o final de cada aula, até o dia seguinte, os fontes escritos em sala ser�
 
 https://www.proway.com.br/curso/programador-flutter-avancado
 
+**Aplicativos responsivos**
+
 **Aula 1**
+- AspectRatio
+- FittedBox
+- FractionallySizedBox
+- LayoutBuilder
 
 
 **Aula 2**
+- MediaQuery
+- MediaQueryData
+- OrientationBuilder
+- CustomSingleChildLayout
+- CustomMultiChildLayout
 
 
 **Aula 3**
