@@ -23,6 +23,9 @@ https://www.proway.com.br/curso/programador-flutter-avancado
 
 
 **Aula 3**
+- Slivers
+- Animações
+- Painting
 
 
 **Aula 4**
