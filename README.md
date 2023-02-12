@@ -32,6 +32,10 @@ https://www.proway.com.br/curso/programador-flutter-avancado
 
 
 **Aula 5**
+- Garantia de qualidade
+- Teste unitário
+- Teste de Widget
+- Teste de integração
 
 
 **Aula 6**
