@@ -24,11 +24,12 @@ https://www.proway.com.br/curso/programador-flutter-avancado
 
 **Aula 3**
 - Slivers
-- Animações
 - Painting
+- Animações
 
 
 **Aula 4**
+- Animações
 
 
 **Aula 5**
@@ -48,6 +49,5 @@ https://www.proway.com.br/curso/programador-flutter-avancado
 
 
 **Contato**
-Dúvidas, envie um e-mail para fernando_duwe@hotmail.com
-
-Meu Whatsapp: (47) 99754-3534
+- Dúvidas, envie um e-mail para fernando_duwe@hotmail.com
+- Meu Whatsapp: (47) 99754-3534
