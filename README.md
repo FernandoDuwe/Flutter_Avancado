@@ -42,12 +42,13 @@ https://www.proway.com.br/curso/programador-flutter-avancado
 **Aula 6**
 - Arquitetura de aplicações
 - Gerenciamento de estado
-- Redux
-- BLoC
-- MobX
+    - Redux
 
 
 **Aula 7**
+- Arquitetura de aplicações & Gerenciamento de estado
+    - BLoC
+    - MobX
 - Arquitetura e gerenciamento de estados na prática
 
 
