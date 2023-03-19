@@ -10,8 +10,7 @@ class ContactListState {
     int vrCounter = 0;
 
     list.forEach((element) {
-      if (element.favorito)
-        vrCounter++;
+      if (element.favorito) vrCounter++;
     });
 
     return vrCounter;
@@ -29,7 +28,8 @@ class ContactListAction {
 }
 
 // O método reducer é que efetuará as alterações no estado atual
-ContactListState contactListReducer(ContactListState prContactList, dynamic prAction) {
+ContactListState contactListReducer(
+    ContactListState prContactList, dynamic prAction) {
   if (prAction.action == ContactListActionType.Add) {
     List<ContactModel> vrList = prContactList.list;
 
@@ -42,8 +42,7 @@ ContactListState contactListReducer(ContactListState prContactList, dynamic prAc
     List<ContactModel> vrList = prContactList.list;
 
     for (var i = vrList.length - 1; i >= 0; i--) {
-      if (vrList[i].nome == prAction.model.nome)
-        vrList.removeAt(i);
+      if (vrList[i].nome == prAction.model.nome) vrList.removeAt(i);
     }
 
     return ContactListState(vrList);
