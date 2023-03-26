@@ -5,7 +5,8 @@ class PostRepository {
   Future<List<PostModel>> getPosts() async {
     List<PostModel> vrList = [];
 
-    QuerySnapshot vrQuery = await FirebaseFirestore.instance.collection("posts").get();
+    QuerySnapshot vrQuery =
+        await FirebaseFirestore.instance.collection("posts").get();
 
     vrQuery.docs.forEach((element) {
       vrList.add(PostModel.fromJson(element.data() as Map<String, dynamic>));

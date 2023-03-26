@@ -1,8 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_example/screens/homeScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:mobx_firebase_login/screens/createUserScreen.dart';
+import 'package:mobx_firebase_login/screens/homeScreen.dart';
+import 'package:mobx_firebase_login/screens/loginScreen.dart';
+import 'package:mobx_firebase_login/stores/userStore.dart';
+import 'package:provider/provider.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(
@@ -23,9 +27,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
       initialRoute: "/",
       routes: {
-        "/": (context) => HomeScreen(),
+        "/": (context) => LoginScreen(),
+        "/newUser": (context) => CreateUserScreen(),
+        "/home": (context) => HomeScreen(),
       },
     );
   }
