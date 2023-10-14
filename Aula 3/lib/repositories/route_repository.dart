@@ -26,6 +26,7 @@ class RouteRepository {
       RouteModel.exemplo(
           title: "Animated Widget", route: "/exemplo/animatedWidget"),
       RouteModel.exemplo(title: "AnimatedBuilder", route: "/exemplo/animatedBuilder"),
+      RouteModel.exemplo(title: "Curved Animation", route: "/exemplo/curved"),
 
       // Exercícios
       RouteModel.exercicio(title: "Exercício 1", route: "/exercicio/1"),
@@ -34,7 +35,8 @@ class RouteRepository {
       RouteModel.exercicio(title: "Exercício 6", route: "/exercicio/6"),
       RouteModel.exercicio(title: "Exercício 7", route: "/exercicio/7"),
       RouteModel.exercicio(title: "Exercício 8", route: "/exercicio/8"),
-      RouteModel.exercicio(title: "Exercício 9", route: "/exercicio/9")
+      RouteModel.exercicio(title: "Exercício 9", route: "/exercicio/9"),
+      RouteModel.exercicio(title: "Exercício 10", route: "/exercicio/10"),
     ];
   }
 

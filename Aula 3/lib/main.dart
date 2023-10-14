@@ -4,10 +4,12 @@ import 'package:flutter_avancado_aula1/screens/animacao_screen.dart';
 import 'package:flutter_avancado_aula1/screens/animated_builder_screen.dart';
 import 'package:flutter_avancado_aula1/screens/animated_widget_example.dart';
 import 'package:flutter_avancado_aula1/screens/aspect_ratio_example.dart';
+import 'package:flutter_avancado_aula1/screens/curved_animation_screen.dart';
 import 'package:flutter_avancado_aula1/screens/custom_multi_child_layout_screen.dart';
 import 'package:flutter_avancado_aula1/screens/custom_paint_screen.dart';
 import 'package:flutter_avancado_aula1/screens/custom_single_child_screen.dart';
 import 'package:flutter_avancado_aula1/screens/exercicio1.dart';
+import 'package:flutter_avancado_aula1/screens/exercicio10.dart';
 import 'package:flutter_avancado_aula1/screens/exercicio2.dart';
 import 'package:flutter_avancado_aula1/screens/exercicio4.dart';
 import 'package:flutter_avancado_aula1/screens/exercicio6.dart';
@@ -49,6 +51,7 @@ class MyApp extends StatelessWidget {
         "/exemplo/animacoes/1": (context) => AnimacaoScreen(),
         "/exemplo/animatedWidget": (context) => AnimatedWidgetExample(),
         "/exemplo/animatedBuilder": (context) => AnimatedBuilderScreen(),
+        "/exemplo/curved": (context) => CurvedAnimationScreen(),
 
         "/exercicio/1": (context) => Exercicio1(),
         "/exercicio/2": (context) => Exercicio2(),
@@ -57,6 +60,7 @@ class MyApp extends StatelessWidget {
         "/exercicio/7": (context) => Exercicio7(),
         "/exercicio/8": (context) => Exercicio8(),
         "/exercicio/9": (context) => Exercicio9(),
+        "/exercicio/10": (context) => Exercicio10(),
       },
     );
   }
