@@ -1,52 +1,65 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 
 class Exercicio1 extends StatefulWidget {
-  const Exercicio1({Key? key}) : super(key: key);
+  const Exercicio1({super.key});
 
   @override
   State<Exercicio1> createState() => _Exercicio1State();
 }
 
 class _Exercicio1State extends State<Exercicio1> {
-
-  List<String> images = [
-    "https://www.seiu1000.org/sites/main/files/imagecache/hero/main-images/camera_lense_0.jpeg",
-    "https://images.pexels.com/photos/33044/sunflower-sun-summer-yellow.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://cdn-media-2.freecodecamp.org/w1280/5f9c9a4c740569d1a4ca24c2.jpg",
-  ];
-
-  int width = 3;
-  int height = 1;
+  int aspectWidth = 3;
+  int aspectHeight = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Exercício 1 - (${this.width} / ${this.height})"),
+        title: Text("Exercício 1 (${aspectWidth} / ${aspectHeight})"),
         actions: [
-          IconButton(onPressed: () {
-            setState(() {
-              this.width++;
-            });
-          }, icon: Icon(Icons.width_normal_rounded)),
-          IconButton(onPressed: () {
-            setState(() {
-              this.height++;
-            });
-          }, icon: Icon(Icons.height)),
+          IconButton(
+              onPressed: () {
+                setState(() {
+                  aspectWidth = aspectWidth + 1;
+                });
+              },
+              icon: Icon(Icons.width_full_outlined)),
+          IconButton(
+              onPressed: () {
+                setState(() {
+                  aspectHeight = aspectHeight + 1;
+                });
+              },
+              icon: Icon(Icons.height)),
         ],
       ),
-      body: ListView.builder(
-          itemCount: this.images.length,
-          itemBuilder: (context, index) {
-            return AspectRatio(
-              aspectRatio: this.width / this.height,
-              child: Image(
-                image: NetworkImage(this.images[index]),
-                fit: BoxFit.cover,
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            AspectRatio(
+              aspectRatio: aspectWidth / aspectHeight,
+              child: Image.network(
+                "https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg",
+                height: double.infinity,
+                width: double.infinity,
+                fit: BoxFit.fill,
               ),
-            );
-          }),
+            ),
+            AspectRatio(
+              aspectRatio: aspectWidth / aspectHeight,
+              child: Image.network(
+                "https://h5p.org/sites/default/files/h5p/content/1209180/images/file-6113d5f8845dc.jpeg",
+                width: double.infinity,
+                height: double.infinity,
+                fit: BoxFit.fill,
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
