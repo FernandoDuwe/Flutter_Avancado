@@ -1,5 +1,5 @@
-import 'package:exemplo_redux/screens/homeScreen.dart';
-import 'package:exemplo_redux/store/contactStore.dart';
+import 'package:carrinho_compras/reducer/carrinho_compras_reducert.dart';
+import 'package:carrinho_compras/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
@@ -8,19 +8,15 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return StoreProvider(
-      store: contactStore,
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        initialRoute: "/",
-        routes: {
-          "/": (context) => HomeScreen(),
-        },
-      ),
-    );
+        store: carrinhoComprasStore,
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: HomeScreen(),
+        ));
   }
 }
